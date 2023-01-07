@@ -18,9 +18,15 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
           body: Container(
-        child: Column(children: [
-          RadioListTile(value: 1, groupValue: val, onChanged: (s) {}),
-          RadioListTile(value: 2, groupValue: val, onChanged: (s) {}),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+          RadioListTile(value: 1, groupValue: val, onChanged: (s) {setState(() {
+            val = s;
+          });}),
+          RadioListTile(value: 2, groupValue: val, onChanged: (s) {setState(() {
+            val = s;
+          });}),
         ]),
       )),
     );
